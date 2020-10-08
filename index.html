@@ -16,23 +16,38 @@
             </ion-toolbar>
         </ion-header>
         <ion-content>
-            <ion-card>
-                <ion-card-header>
-                    <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-                    <ion-card-title>New Expense</ion-card-title>
-                  </ion-card-header>
-                <ion-card-content>
-                    <ion-item>
-                        <ion-label position="floating">Expense Reason</ion-label>
-                        <ion-input type="text"></ion-input>
-                    </ion-item>   
-                    <ion-item>
-                        <ion-label position="floating">Expense Amount</ion-label>
-                        <ion-input type="number"></ion-input>
-                    </ion-item>  
-                </ion-card-content>
-            </ion-card>          
+            <ion-grid>
+                <ion-row>
+                    <ion-col size-sm="6" offset-sm="3" offset-lg="3" size-lg="6" size-xs="12">
+                        <ion-card>
+                            <ion-card-header>
+                                <ion-card-subtitle>Plan Your Budget</ion-card-subtitle>
+                                <ion-card-title>New Expense</ion-card-title>
+                              </ion-card-header>
+                            <ion-card-content>
+                                <ion-item>
+                                    <ion-label position="floating">Expense Reason</ion-label>
+                                    <ion-input type="text" id="expense-reason"></ion-input>
+                                </ion-item>   
+                                <ion-item>
+                                    <ion-label position="floating">Expense Amount</ion-label>
+                                    <ion-input type="number" id="expense-amount"></ion-input>
+                                </ion-item>  
+                                <div class="ion-text-right ion-margin-vertical">
+                                    <ion-button fill="outline" color="danger" id="clear-button">
+                                        <ion-icon slot="start" name="close-outline"></ion-icon>Clear
+                                    </ion-button>
+                                    <ion-button id="add-expense-button">
+                                        <ion-icon name="add-outline" slot="start"></ion-icon>Add Expense
+                                    </ion-button>
+                                </div>
+                            </ion-card-content>
+                        </ion-card>  
+                    </ion-col>
+                </ion-row>
+            </ion-grid>        
         </ion-content>
     </ion-app>
+    <script src="app.js" type="text/javascript"></script>
 </body>
 </html>
