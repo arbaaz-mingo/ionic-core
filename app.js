@@ -23,14 +23,12 @@ addExpenseButton.addEventListener('click', ()=> {
         enteredAmount.trim().length <=0
         ){
             //alert('Invalid Values!');
-            alertCtrl.create({
-                message: 'Please enter a valid reason and amount!',
-                header: 'Invalid Inputs',
-                buttons: ['okay']
-            }).then(alertElement=>{
-                alertElement.present();
-            });
-            return;
+            const alert = document.createElement('ion-alert');
+            alert.header = 'Invalid inputs';
+            alert.message = 'Please enter a valid reason and amount!';
+            alert.buttons = ['Okay'];
+            document.body.appendChild(alert);
+            return alert.present();    
         }
         //console.log(enteredReason, enteredAmount);
         const newItem = document.createElement('ion-item');
